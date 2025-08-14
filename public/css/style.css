@@ -20,6 +20,9 @@ body{
  .f-info-links a{
     text-decoration: none ;
     color: #222222 !important;
+   
+ }
+ .f-info-socials a{
     display: inline-flex;       /* makes it size to icon */
     align-items: center;        /* vertically center icon */
     justify-content: center;    /* horizontally center icon */
