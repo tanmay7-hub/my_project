@@ -20,9 +20,16 @@ body{
  .f-info-links a{
     text-decoration: none ;
     color: #222222 !important;
+    display: inline-flex;       /* makes it size to icon */
+    align-items: center;        /* vertically center icon */
+    justify-content: center;    /* horizontally center icon */
+    padding: 8px;               /* increase clickable area */
+    pointer-events: auto;       /* ensure clicks work */
+    z-index: 1000;
  }
  .f-info-links a:hover{
     text-decoration: underline;
+    color: #0077b5;
  }
  
  .f-info-socials,.f-info-links,.f-info-brand{
@@ -34,7 +41,8 @@ body{
  }
  .f-info-socials i{
      font-size:1.4rem;
-     margin-right:1rem;
+      font-size: 1.4rem;
+      margin: 0;
  }
  .f-info{
     text-align: center;
