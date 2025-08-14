@@ -1,4 +1,6 @@
-{
+{   "scripts": {
+   "postinstall": "npm install --legacy-peer-deps"
+    },
    "engines":{
        "node":"22.15.0"
    },
