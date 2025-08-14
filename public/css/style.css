@@ -1,0 +1,245 @@
+body{
+     font-family: "Plus Jakarta Sans", sans-serif !important;
+     display:flex;
+     flex-direction: column;
+     min-height: 100vh;
+}
+
+ .navbar{
+    height:5rem;
+    background-color: white;;
+ }
+ .fa-regular{
+    color:#fe424d;
+    font-size: 2rem;
+ }
+ .nav-link{
+    color: #222222 !important;
+
+ }
+ .f-info-links a{
+    text-decoration: none ;
+    color: #222222 !important;
+ }
+ .f-info-links a:hover{
+    text-decoration: underline;
+ }
+ 
+ .f-info-socials,.f-info-links,.f-info-brand{
+    width:100%;
+   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .f-info-socials i{
+     font-size:1.4rem;
+     margin-right:1rem;
+ }
+ .f-info{
+    text-align: center;
+    height:8rem;
+    background-color:#ebebeb;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+ }
+ /* cards */
+.listing-card{
+   margin-bottom:2rem;
+   border:none !important;
+}
+.card-img-top{
+   width:100% !important;
+   border-radius:1rem !important;
+}
+.card-body{
+   padding:0 !important;
+}
+.card-text p{
+   font-weight:400;
+}
+.listing-link{
+   text-decoration: none;
+   
+}
+/* card overlay */
+.card-img-overlay{
+   opacity: 0;
+}
+.card-img-overlay:hover{
+   opacity: 0.2;
+   background-color: white;
+}
+/* new page styling */
+.add-btn{
+   background-color:#fe424d !important;
+   border:none !important;
+}
+.container{
+   flex:1;
+}
+/* edit page */
+.edit-btn{
+   background-color: #fe424d !important;
+   border:none !important;
+}
+/* show page */
+.show-img{
+   
+    height:40vh ;
+}
+.btns{
+   display: flex;
+   
+}
+.show-card{
+   padding-left:0;
+   padding-right: 0;;
+}
+#map {
+    height:400px;
+    width:80%;
+ }
+ .compass-icon{
+   display:flex;
+    justify-content: space-evenly;
+    margin:0.5rem;
+  }
+  /* search panel */
+ .btn-search{
+    background-color: #fe424f ;
+    color: white;
+    border-radius: 25px;
+    padding:0 1rem 0 1rem;
+  }
+  .btn-search:hover{
+    background-color: #fe424f;
+    color: white;
+  }
+  .btn-search i{
+    display:inline;
+    margin-right: 5px;
+  } 
+  .search-inp{
+    border-radius: 25px;
+    padding:0.5rem 3rem 0.5rem 3rem; 
+  }
+   .search-inp:focus{
+      outline: none;
+      box-shadow: 0 0 5px #fe424f;
+   }
+   .search-inp::placeholder{
+         color: #746d6d;
+         font-weight: 500;
+   }
+   .dropdown{
+      margin-right:5px;
+
+   }
+   .dropdown.dropdown-item:hover{
+       background-color: #fe424f !important;   
+       color: white !important;
+   }
+  .btn.dropdown-toggle.show,
+  .btn.dropdown-toggle:active {
+    background-color: #fe424f; 
+    color: white;
+     
+   }
+  /* login signup */
+  .btn-log{
+      /* background-color: #fe424f;
+      color: white !important; */
+      border-radius: 30px;
+      font-weight: 500;
+      padding:0.5rem 0.5rem 0.5rem 0.75rem !important;
+      margin-left: 3px;
+  }
+  .btn-log:hover{
+     background-color: #fe424f;
+      color: white !important;
+  }
+  
+  /* index mai filter */
+  .filters{
+      display:flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap:wrap-nowrap;
+      text-align:center;
+      align-items: center;
+      border-radius:25px;
+       border: 2px solid #746d6d;
+       height: 4.5rem;   
+       padding: 1.5rem 2rem 2rem 2rem;
+       margin:1rem;
+       
+   }
+   .filter{
+     margin-right:2rem;
+     margin-top:2rem;
+     opacity:0.8;
+     font-size:0.9rem;
+   text-decoration: none;  /* Removes underline from <a> */
+     color: inherit; 
+
+   }
+   .filter:hover{
+     opacity:1;
+     cursor:pointer;
+     font-weight: bold;   
+     
+   }
+   .tax-toggle{
+    margin-top:1rem; 
+    margin-left:2rem;
+    margin-bottom: 0.5rem;
+    border:black 1px solid;
+    border-radius: 1rem;
+     padding:1rem;
+    height:2.5rem;
+    font-size: 0.9rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .tax-info{
+      display:none;
+   }
+
+/* bookingModal */
+/* Booking Modal Styling */
+/* .modal-content {
+  border-radius: 15px;
+  border: 2px solid #ff4b5c;
+} */
+
+.btn-search {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+}
+.modal-footer{
+    display:flex;
+    justify-content: center;
+}
+
+.btn-search:hover {
+  background-color: #e94350;
+}
+.book{
+   border-radius: 25px;
+}
+.booking-btn{
+   height:2rem;
+}
+
+.booking-confirm{
+   
+    display: flex !important;
+    justify-content: center !important ;  /* Horizontally center */
+    align-items: center !important;      /* Vertically center */
+  
+}

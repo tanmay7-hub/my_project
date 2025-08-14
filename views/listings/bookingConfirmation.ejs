@@ -1,0 +1,17 @@
+<%=layout("layouts/boilerplate.ejs")%>
+
+
+<div class="center-wrapper booking-confirm">
+  <div class="confirmation-box">
+    
+    <h2>🎉 Booking Confirmed!</h2>
+    <p>Thank you for booking <strong><%= booking.listing.title %></strong></p>
+    <img src="<%= booking.listing.image.url %>" class="img-fluid mt-2 mb-1" style="max-width: 300px; border-radius: 10px;">
+
+    <p>Check-in: <%= booking.checkIn.toLocaleDateString("en-IN") %></p>
+    <p>Check-out: <%= booking.checkOut.toLocaleDateString("en-IN") %></p>
+    <p>Total Amount: ₹<%= booking.totalAmount %></p>
+    <a href="/my-bookings" class=" btn btn-search btn-log ">View My Bookings</a>
+  </div>
+</div>
+

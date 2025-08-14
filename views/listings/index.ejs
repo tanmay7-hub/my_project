@@ -1,0 +1,99 @@
+<%=layout("layouts/boilerplate.ejs")%>
+<body>
+    <div class="filters navbar navbar-expand-md bg-body-light border-bottom ">
+      
+        <a class=" filter" href="/listing?category=Trending">
+          <i class="fa-solid fa-fire" ></i>
+          <p>Trending</p>
+        </a>
+        <a class="filter" href="/listing?category=Rooms">
+          <i class="fa-solid fa-bed" ></i>
+          <p>Rooms</p>
+        </a>
+        <a class="filter" href="/listing?category=City">
+         <i class="fa-solid fa-mountain-city" ></i>
+          <p>City</p>
+        </a>
+        <a class="filter"  href="/listing?category=Mountain">
+          <i class="fa-solid fa-mountain"></i>
+          <p>Mountain</p>
+        </a>
+
+        <a class="filter"  href="/listing?category=Castles">
+          <i class="fa-solid fa-house-chimney"></i>
+          <p>Castles</p>
+        </a>
+        <a class="filter" href="/listing?category=Pools">
+         <i class="fa-solid fa-person-swimming" ></i>
+          <p>pools</p>
+        </a>
+        <a class="filter"  href="/listing?category=Camping">
+          <i class="fa-solid fa-campground"></i>
+          <p>Camping</p>
+        </a>
+        <a class="filter"  href="/listing?category=Farms">
+          <i class="fa-solid fa-cow"></i>
+          <p>Farms</p>
+        </a>
+        <a class="filter" href="/listing?category=Arctic">
+          <i class="fa-solid fa-snowflake" ></i>
+          <p>Arctic</p>
+        </a>
+         <!-- <div>
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <p>Beach</p>
+         </div> -->
+          <div class="tax-toggle container-sm">
+            <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Display total after tax</label>
+          </div>
+        </div>
+        
+    </div>
+     
+   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <%  for(let listing of allListings){%>
+      <a href="/listing/<%=listing._id%>" class="listing-link">
+    <div class="card col listing-card" >
+  <img src="<%=listing.image.url%>" style="height:20rem;" class="card-img-top" alt="listing_image">
+ 
+  <div class="card-img-overlay"></div>
+
+  <div class="card-body">
+    <p class="card-text">
+       <b><%=listing.title%></b>
+       <br>
+      <p> &#8377;<%=listing.price.toLocaleString("en-IN")%>/night &nbsp;&nbsp;
+      <i class="tax-info"> +18% Gst</i>
+      </p>  
+       
+    </p>
+  </div>
+</div>
+</a>
+<% }%>
+   </div>  
+</body>
+</html>
+<script>
+   let taxSwitch= document.getElementById("switchCheckDefault");
+   taxSwitch.addEventListener("click",()=>{
+      let taxInfo = document.querySelectorAll(".tax-info");
+      if(taxSwitch.checked){
+         taxInfo.forEach((el)=>{
+            el.style.display="inline";
+          let price = el.parentElement.textContent.split("/")[0].replace(/[^\d]/g, "");
+          price = parseInt(price, 10);
+
+          let totalPrice = Math.round(price * 1.18);
+
+          el.textContent = ` +18% Gst(Total:₹${totalPrice.toLocaleString("en-IN")})`;
+      })}else{
+         taxInfo.forEach((el)=>{
+            el.style.display="none";
+         });
+      }
+   });
+
+</script>

@@ -1,0 +1,41 @@
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Book This Listing</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="bookingForm">
+          <!-- Hidden listingId -->
+          <input type="hidden" name="listingId" value="<%= listing._id %>">
+          <!-- Hidden total amount (set dynamically) -->
+          <input type="hidden" id="finalAmount" name="totalAmount" >
+
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control book" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label>Check-in Date</label>
+            <input type="date" class="form-control book" name="checkIn" required>
+          </div>
+          <div class="mb-3">
+            <label>Check-out Date</label>
+            <input type="date" class="form-control book" name="checkOut" required>
+          </div>
+          <div class="mb-3">
+            <label>Amount</label>
+            <input type="number" class="form-control book" value="<%= listing.price %>" readonly>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn book btn-search booking-btn">Proceed to Pay</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

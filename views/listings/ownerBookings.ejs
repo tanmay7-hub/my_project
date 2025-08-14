@@ -1,0 +1,40 @@
+<%=layout("layouts/boilerplate.ejs")%>
+
+<div class="container mt-5">
+    <h2>My Property Bookings</h2>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Listing</th>
+                <th>Booked by</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Amount</th>
+                <th>Payment Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (bookings.length === 0) { %>
+                <tr>
+                    <td colspan="6" class="text-center">No bookings yet.</td>
+                </tr>
+            <% } else { %>
+                <% bookings.forEach(booking => { %>
+                    <tr>
+                        <td><%= booking.listing.title %></td>
+                        <td><%= booking.user.username %></td>
+                        <td><%= booking.checkIn.toLocaleDateString('en-IN', { 
+                             day: '2-digit', month: '2-digit', year: 'numeric' }) %></td>
+
+                        <td><%= booking.checkOut.toLocaleDateString('en-IN', { 
+                             day: '2-digit', month: '2-digit', year: 'numeric'  }) %></td>
+                        <td>₹<%= booking.totalAmount %></td>
+                        <td><%= booking.status %></td>
+                    </tr>
+                <% }) %>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+
