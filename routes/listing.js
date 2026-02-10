@@ -18,7 +18,7 @@ router
 
 //new route
 router.get("/new",IsLoggedIn,listingController.newListingForm);
-
+ 
 router
 .route("/search")
 .get(listingController.SearchListing);
